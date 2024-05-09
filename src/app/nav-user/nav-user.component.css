@@ -1,0 +1,23 @@
+img{
+    height: 100px;
+    width:100px;
+    margin-left: 10px;
+    
+
+}
+.nav {
+    display: flex;
+    align-items: center; /* Alignement vertical au centre */
+    
+  }
+  
+.nav img {
+    margin-right: 10px; /* Espacement entre l'image et les liens */
+    max-height: 100px; /* Hauteur maximale de l'image */
+}
+.nav-link{
+    font-size: larger;
+    color: #59504F;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

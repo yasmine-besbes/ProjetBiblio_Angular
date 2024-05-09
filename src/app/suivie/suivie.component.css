@@ -1,0 +1,19 @@
+th{
+    color:#714c4f;
+    font-size:medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.ajout{
+    background-color: #B57879;
+    font-size: large;
+    color:azure;
+}
+
+.annule{
+    background-color: #C5B3B3;
+    font-size: large;
+    color:azure;
+    
+}

@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Liste des livres empruntés</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Auteur</th>
+        
+          <!-- Ajoutez d'autres en-têtes de colonne si nécessaire -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let livre of livresEmpruntes">
+          <td>{{ livre.Titre }}</td>
+          <td>{{ livre.Auteur }}</td>
+         
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>

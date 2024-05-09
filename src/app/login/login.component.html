@@ -1,0 +1,35 @@
+<div class="parent">
+    <div class="logo">
+        <img src="../../assets/Group 1.png" alt="logo" height="500px" width="500px">
+    </div>
+    <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="Nom"  formControlName="Nom" placeholder="Nom" required="">
+                <input type="text" name="Prenom" formControlName="Prenom"  placeholder="Prénom" required="">
+                <input type="email" name="Mail" formControlName="Mail"  placeholder="Email" required="">
+                <input type="email" name="Login" formControlName="Login"  placeholder="Login" required="">
+                <input type="password" name="Pass"  formControlName="Pass"  placeholder="Password" required="">
+                <input type="text" name="Role"  formControlName="Role"  Value="User" readonly hidden>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+        
+        <div class="login">
+            <form  [formGroup]="loginForm" (ngSubmit)="login()">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email"  class="form-control" formControlName="Login" name="Login" placeholder="Login" required="">
+                <div *ngIf="loginForm.controls.Login.invalid && loginForm.controls.Login.touched && loginForm.controls.Login.errors" class="text-danger text-center">
+                    <div *ngIf="loginForm.controls.Login.errors['required']" >Login is Required!</div>
+                    <div *ngIf="loginForm.controls.Login.errors['email']">Login invalide!</div>
+                </div>
+                <input type="password" class="form-control" formControlName="Pass" name="Pass" placeholder="Password" required="">
+                <div *ngIf="loginForm.controls.Pass.invalid && loginForm.controls.Pass.touched" class="text-danger text-center">Password is Required!</div>
+                <button type="submit" [disabled]="!loginForm.valid" >Login</button>
+            </form>
+        </div>
+    </div>
+    
+</div>

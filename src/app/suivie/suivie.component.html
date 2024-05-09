@@ -1,0 +1,64 @@
+<div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Notifier User</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Modifier Status</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of utilisateurs">
+                    <td scope="row">{{item.idUser}}</td>
+                    <td>{{item.Nom}}</td>
+                    <td>{{item.Prenom}}</td>
+                    <td>{{item.Mail}}</td>
+                    <td><a href="mailto:item.Mail" class="btn ajout m-1">Notifier</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Auteur</th>
+                    <th scope="col">Categorie</th>
+                    <th scope="col">Quantite</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of livres">
+                    <td scope="row">{{item.idLivre}}</td>
+                    <td>{{item.Titre}}</td>
+                    <td>{{item.Auteur}}</td>
+                    <td>{{item.Categorie}}</td>
+                    <td>{{item.Quantite}}</td>
+                    <td>{{item.Image}}</td>
+                    <td>{{item.Status}}</td>
+                    <td><a class="btn annule m-1"  (click)="GetLivreById(item.idLivre)">Modifier Status</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+      </div>
+</div>

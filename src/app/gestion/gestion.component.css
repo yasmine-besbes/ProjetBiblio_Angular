@@ -1,0 +1,28 @@
+.btns{
+    float:right;
+}
+
+.ajout{
+    background-color: #B57879;
+    font-size: large;
+    color:azure;
+}
+
+.annule{
+    background-color: #BEA6B9;
+    font-size: large;
+    color:azure;
+    
+}
+label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:#905b5c;
+    font-size: large;
+}
+
+th{
+    color:#66484a;
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
